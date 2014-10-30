@@ -15,6 +15,9 @@
         <module>C04_One_class_into_two_tables</module>
         <module>C05_Embedded_objects</module>
         <module>C06_One_to_one_mapping</module>
+        <module>C07_Triggers_and_refreshing_objects</module>
+        <module>C08_Deleting_entities</module>
+        <module>C09_JPQL</module>
     </modules>
 
     <properties>
