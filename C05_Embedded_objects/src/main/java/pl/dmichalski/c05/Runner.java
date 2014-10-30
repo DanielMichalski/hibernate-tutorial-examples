@@ -1,9 +1,10 @@
-package pl.dmichalski.c04;
+package pl.dmichalski.c05;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pl.dmichalski.c04.entity.Employee;
-import pl.dmichalski.c04.repository.EmployeeRepository;
+import pl.dmichalski.c05.entity.Address;
+import pl.dmichalski.c05.entity.Employee;
+import pl.dmichalski.c05.repository.EmployeeRepository;
 
 /**
  * Author: Daniel
@@ -13,17 +14,21 @@ public class Runner {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("spring/spring-data.xml", "spring/spring-general.xml");
 
+        EmployeeRepository repository =
+                context.getBean("employeeRepository", EmployeeRepository.class);
+
+
         Employee employee = new Employee();
         employee.setFirstName("John");
         employee.setLastName("Newman");
         employee.setSalary(10000);
-        employee.setLocality("Warsaw");
-        employee.setZipCode("01-153");
-        employee.setStreet("Long street");
-        employee.setStreetNumber(43);
 
-        EmployeeRepository repository =
-                context.getBean("employeeRepository", EmployeeRepository.class);
+        Address address = new Address();
+        address.setLocality("Warsaw");
+        address.setZipCode("01-153");
+        address.setStreet("Long street");
+        address.setStreetNumber(43);
+        employee.setAddress(address);
 
         repository.save(employee);
     }

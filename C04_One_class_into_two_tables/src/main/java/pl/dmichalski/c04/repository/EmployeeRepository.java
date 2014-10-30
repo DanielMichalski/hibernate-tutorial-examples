@@ -1,10 +1,10 @@
 package pl.dmichalski.c04.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.dmichalski.c04.entity.DateTime;
+import pl.dmichalski.c04.entity.Employee;
 
 /**
  * Author: Daniel
  */
-public interface DateTimeRepository extends JpaRepository<DateTime, Long> {
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }

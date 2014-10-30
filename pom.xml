@@ -13,6 +13,8 @@
         <module>C02_JPA_possible_types</module>
         <module>C03_Dates</module>
         <module>C04_One_class_into_two_tables</module>
+        <module>C05_Embedded_objects</module>
+        <module>C06_One_to_one_mapping</module>
     </modules>
 
     <properties>
