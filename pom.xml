@@ -18,6 +18,9 @@
         <module>C07_Triggers_and_refreshing_objects</module>
         <module>C08_Deleting_entities</module>
         <module>C09_JPQL</module>
+        <module>C10_Bidirectional_one_to_one_mapping</module>
+        <module>C11_Unidirectional_one_to_many_mapping</module>
+        <module>C12_Bidirectional_one_to_many_mapping</module>
     </modules>
 
     <properties>

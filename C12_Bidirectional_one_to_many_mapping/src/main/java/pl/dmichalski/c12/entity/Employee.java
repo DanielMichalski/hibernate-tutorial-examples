@@ -1,26 +1,26 @@
-package pl.dmichalski.c09.entity;
+package pl.dmichalski.c12.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Author: Daniel
  */
-@Entity(name = "employee")        // entity name (use this name in JPQL queries)
-@Table(name = "worker")           // database table name
+@Entity
 public class Employee {
 
     @Id
     @GeneratedValue
     private long id;
 
-    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "salary")
     private double salary;
+
+    @OneToMany(mappedBy = "employee")
+    private List<Phone> phones;
 
     public long getId() {
         return id;
@@ -54,14 +54,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Employee{");
-        sb.append("id=").append(id);
-        sb.append(", firstName='").append(firstName).append('\'');
-        sb.append(", lastName='").append(lastName).append('\'');
-        sb.append(", salary=").append(salary);
-        sb.append('}');
-        return sb.toString();
+    public List<Phone> getPhones() {
+        return phones;
+    }
+
+    public void setPhones(List<Phone> phones) {
+        this.phones = phones;
     }
 }

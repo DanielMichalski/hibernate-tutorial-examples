@@ -6,7 +6,6 @@ import org.springframework.data.repository.query.Param;
 import pl.dmichalski.c09.entity.Employee;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Author: Daniel
@@ -26,7 +25,11 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("SELECT e FROM Employee e WHERE e.salary > :salary ORDER BY e.salary")
     public List<Employee> getWorkerWithSalaryGreaterThanUsingJPQL(@Param("salary") double salary);
 
+    @Query("SELECT e FROM Employee e WHERE e.firstName = :name AND e.lastName = :surname")
+    public List<Employee> getEmpoloyees(@Param("name") String name, @Param("surname") String surname);
+
     @Query ("SELECT concat(e.firstName, ' ', e.lastName), e.salary * 0.2 FROM Employee e")
     public List<Object> getNameSurnameAndHigherSalary();
+
 
 }
