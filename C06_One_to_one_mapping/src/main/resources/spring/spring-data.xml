@@ -23,7 +23,7 @@
     </bean>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="packagesToScan" value="pl.dmichalski.c06.entity"/>
+        <property name="packagesToScan" value="pl.dmichalski.c06.pl.dmichalski.c14.entity"/>
         <property name="dataSource" ref="datasource"/>
         <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
         <property name="jpaPropertyMap" ref="jpaPropertyMap"/>

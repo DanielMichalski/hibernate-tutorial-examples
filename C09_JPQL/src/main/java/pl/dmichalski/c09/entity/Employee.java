@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * Author: Daniel
  */
-@Entity(name = "employee")        // entity name (use this name in JPQL queries)
+@Entity(name = "employee")        // pl.dmichalski.c14.entity name (use this name in JPQL queries)
 @Table(name = "worker")           // database table name
 public class Employee {
 
