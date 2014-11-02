@@ -21,6 +21,7 @@
         <module>C10_Bidirectional_one_to_one_mapping</module>
         <module>C11_Unidirectional_one_to_many_mapping</module>
         <module>C12_Bidirectional_one_to_many_mapping</module>
+        <module>C13_Bidirectional_many_to_many_mapping</module>
     </modules>
 
     <properties>
