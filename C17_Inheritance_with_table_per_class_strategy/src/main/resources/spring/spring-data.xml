@@ -13,7 +13,7 @@
 			http://www.springframework.org/schema/util
 			http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <jpa:repositories base-package="pl.dmichalski.c16"/>
+    <jpa:repositories base-package="pl.dmichalski.c17"/>
 
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${db.driver}"/>
@@ -23,7 +23,7 @@
     </bean>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="packagesToScan" value="pl.dmichalski.c16.entity"/>
+        <property name="packagesToScan" value="pl.dmichalski.c17.entity"/>
         <property name="dataSource" ref="datasource"/>
         <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
         <property name="jpaPropertyMap" ref="jpaPropertyMap"/>
