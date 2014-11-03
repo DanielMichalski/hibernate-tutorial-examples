@@ -28,6 +28,8 @@
         <module>C16_Inheritance_with_joined_strategy</module>
         <module>C17_Inheritance_with_table_per_class_strategy</module>
         <module>C18_Criteria_API</module>
+        <module>C19_Cascade</module>
+        <module>C20_Eager_or_lazy_fetch</module>
     </modules>
 
     <properties>
